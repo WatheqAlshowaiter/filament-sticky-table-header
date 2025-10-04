@@ -44,6 +44,10 @@
 
 Make Filament tables stick when you scroll down.
 
+## Demo
+
+![Demo](./arts/demo.gif)
+
 ## Installation
 
 You can install the package via composer:
