@@ -2,14 +2,12 @@
 
 namespace WatheqAlshowaiter\FilamentStickyTableHeader;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class FilamentStickyTableHeaderServiceProvider extends PackageServiceProvider
+class FilamentStickyTableHeaderServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function boot(): void
     {
-        $package
-            ->name('filament-sticky-table-header');
+        //
     }
 }

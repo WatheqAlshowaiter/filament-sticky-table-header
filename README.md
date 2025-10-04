@@ -64,8 +64,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 
 [//]: # (todos)
-[//]: # (remove spatie/laravel-package-tools)
 [//]: # (add gif/video for the readme)
 [//]: # (add filament banner to readme and also for the og:image in github settings)
-[//]: # (add to packagist)
 [//]: # (remove pest and keep phpunit for simplicity maybe)
