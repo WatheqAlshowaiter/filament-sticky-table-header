@@ -68,14 +68,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [//]: # (todos)
 
-[//]: # (fix on mobile screen)
 
 [//]: # (add gif/video for the readme)
 
 [//]: # (add filament banner to readme and also for the og:image in github settings)
-
-[//]: # (support filament 4.x and 3.x)
-
-[//]: # (in test ci: filament 3 requrie => laravel 10, PHP 8.1+)
-[//]: # (in test ci: filament 4 require => laravel v11.28, PHP 8.2+)
-
