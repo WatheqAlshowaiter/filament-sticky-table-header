@@ -2,6 +2,15 @@
 
 All notable changes to `filament-sticky-table-header` will be documented in this file.
 
+## 0.1.4 - 2025-10-04
+
+### What's Changed
+
+* refactor: simplify package and fix asset structure by @WatheqAlshowaiter in https://github.com/WatheqAlshowaiter/filament-sticky-table-header/pull/4
+* test: migrate from pest to phpunit by @WatheqAlshowaiter in https://github.com/WatheqAlshowaiter/filament-sticky-table-header/pull/5
+
+**Full Changelog**: https://github.com/WatheqAlshowaiter/filament-sticky-table-header/compare/0.1.3...0.1.4
+
 ## 0.1.2 - 2025-10-04
 
 **Full Changelog**: https://github.com/WatheqAlshowaiter/filament-sticky-table-header/compare/0.1.1...0.1.2
