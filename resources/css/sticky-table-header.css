@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    .fi-ta-table thead {
+        position: sticky !important;
+        top: 0;
+    }
+
+    .dark .fi-ta-table thead {
+        /*background-color: #242427;*/
+    }
+
+    .fi-ta-content {
+        max-height: calc(100vh - 20rem);
+        overflow-y: auto;
+        position: relative;
+    }
+}

@@ -1,29 +1,27 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "watheqalshowaiter/filament-sticky-table-header",
+    "description": "Make FilamentPHP tables stick when you scroll down",
     "keywords": [
-        ":vendor_name",
+        "WatheqAlshowaiter",
         "laravel",
-        ":package_slug"
+        "filament-sticky-table-header"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/watheqalshowaiter/filament-sticky-table-header",
     "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
+        "issues": "https://github.com/watheqalshowaiter/filament-sticky-table-header/issues",
+        "source": "https://github.com/watheqalshowaiter/filament-sticky-table-header"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Watheq Alshowaiter",
+            "email": "watheq.alshowaiter@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
         "filament/filament": "^3.0",
-        "filament/forms": "^3.0",
-        "filament/tables": "^3.0",
         "spatie/laravel-package-tools": "^1.15.0"
     },
     "require-dev": {
@@ -36,18 +34,17 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "WatheqAlshowaiter\\FilamentStickyTableHeader\\": "src/",
+            "WatheqAlshowaiter\\FilamentStickyTableHeader\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "WatheqAlshowaiter\\FilamentStickyTableHeader\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -67,10 +64,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "WatheqAlshowaiter\\FilamentStickyTableHeader\\FilamentStickyTableHeaderServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentStickyTableHeader": "WatheqAlshowaiter\\FilamentStickyTableHeader\\Facades\\FilamentStickyTableHeader"
             }
         }
     },
