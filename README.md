@@ -67,7 +67,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [//]: # (fix on mobile screen)
 [//]: # (add gif/video for the readme)
 [//]: # (add filament banner to readme and also for the og:image in github settings)
-[//]: # (add simple test)
 [//]: # (remove unneeded ci/cd)
+[//]: # (add feature is 100% test coverage in readme )
 [//]: # (support filament 4.x and 2.x if we can)
 [//]: # (remove pest and keep phpunit for simplicity maybe)

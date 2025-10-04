@@ -2,8 +2,10 @@ name: "Fix PHP Code Styling"
 
 on:
   push:
-    paths:
-      - '**.php'
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: write
