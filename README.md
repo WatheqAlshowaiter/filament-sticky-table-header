@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/watheqalshowaiter/filament-sticky-table-header.svg?style=flat-square)](https://packagist.org/packages/watheqalshowaiter/filament-sticky-table-header)
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+A simple Filament plugin that makes table headers sticky when scrolling down. Keep your column headers visible at all times for better user experience with long tables.
 
 ## Installation
 
@@ -16,38 +16,23 @@ You can install the package via composer:
 composer require watheqalshowaiter/filament-sticky-table-header
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filament-sticky-table-header-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filament-sticky-table-header-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="filament-sticky-table-header-views"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 
+Register the plugin in your Panel provider:
+
 ```php
-$filamentStickyTableHeader = new WatheqAlshowaiter\StickyTableHeaderPlugin();
-echo $filamentStickyTableHeader->echoPhrase('Hello, WatheqAlshowaiter!');
+use WatheqAlshowaiter\FilamentStickyTableHeader\StickyTableHeaderPlugin;
+
+public function panel(Panel $panel): Panel
+{
+    return $panel
+        ->plugins([
+            StickyTableHeaderPlugin::make(),
+        ]);
+}
 ```
+
+That's it! Your table headers will now stick to the top when scrolling.
 
 ## Testing
 
@@ -75,3 +60,10 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+
+
+[//]: # (todos)
+[//]: # (add gif/video for the readme)
+[//]: # (add filament banner to readme and also for the og:image in github settings)
+[//]: # (remove pest and keep phpunit for simplicity maybe)
