@@ -24,7 +24,6 @@ class PluginTest extends TestCase
     public function test_css_file_exists(): void
     {
         $cssPath = __DIR__ . '/../resources/css/sticky-table-header.css';
-
         $this->assertFileExists($cssPath);
     }
 

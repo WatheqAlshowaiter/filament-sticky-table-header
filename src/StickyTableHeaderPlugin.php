@@ -21,13 +21,37 @@ class StickyTableHeaderPlugin implements Plugin
 
     public function register(Panel $panel): void
     {
-        FilamentAsset::register([
+        $assets = [
             Css::make('filament/sticky-table-header', __DIR__ . '/../resources/css/sticky-table-header.css'),
-        ]);
+        ];
+
+        $params = $this->getFilamentAssetParametersCount();
+
+        if ($this->isFilamentV4($params)) {
+            FilamentAsset::register($assets, $this->getId());
+        }
+
+        /**
+         * Filament v3
+         */
+        FilamentAsset::register($assets);
     }
 
     public function boot(Panel $panel): void
     {
         //
+    }
+
+    private function getFilamentAssetParametersCount(): int
+    {
+        return (new \ReflectionMethod(FilamentAsset::class, 'register'))->getNumberOfParameters();
+    }
+
+    /**
+     * In Filament v4, the second parameter is required for the package name.
+     */
+    private function isFilamentV4(int $params): bool
+    {
+        return $params > 1;
     }
 }

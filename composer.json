@@ -20,13 +20,13 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": ">=8.1",
         "filament/filament": "^3.0|^4.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^7.9",
-        "orchestra/testbench": "^8.0"
+        "nunomaduro/collision": "^8.0||^7.0",
+        "orchestra/testbench": "^8.0|^9.0"
     },
     "autoload": {
         "psr-4": {
@@ -41,7 +41,7 @@
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
         "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage",
+        "test:ci": "vendor/bin/phpunit --stop-on-failure --no-coverage",
         "format": "vendor/bin/pint"
     },
     "config": {
