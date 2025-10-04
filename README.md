@@ -5,8 +5,8 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/watheqalshowaiter/filament-sticky-table-header/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/watheqalshowaiter/filament-sticky-table-header/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/watheqalshowaiter/filament-sticky-table-header.svg?style=flat-square)](https://packagist.org/packages/watheqalshowaiter/filament-sticky-table-header)
 
-
-A simple Filament plugin that makes table headers sticky when scrolling down. Keep your column headers visible at all times for better user experience with long tables.
+A simple Filament plugin that makes table headers sticky when scrolling down. Keep your column headers visible at all
+times for better user experience with long tables.
 
 ## Installation
 
@@ -57,17 +57,25 @@ Please review [our security policy](../../security/policy) on how to report secu
 - [Watheq Alshowaiter](https://github.com/WatheqAlshowaiter)
 - [All Contributors](../../contributors)
 
+## Features
+
+✅ it has 100% test coverage.
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 
-
 [//]: # (todos)
+
 [//]: # (fix on mobile screen)
+
 [//]: # (add gif/video for the readme)
+
 [//]: # (add filament banner to readme and also for the og:image in github settings)
-[//]: # (remove unneeded ci/cd)
-[//]: # (add feature is 100% test coverage in readme )
-[//]: # (support filament 4.x and 2.x if we can)
-[//]: # (remove pest and keep phpunit for simplicity maybe)
+
+[//]: # (support filament 4.x and 3.x)
+
+[//]: # (in test ci: filament 3 requrie => laravel 10, PHP 8.1+)
+[//]: # (in test ci: filament 4 require => laravel v11.28, PHP 8.2+)
+
