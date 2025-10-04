@@ -1,10 +1,17 @@
 {
     "name": "watheqalshowaiter/filament-sticky-table-header",
-    "description": "Make FilamentPHP tables stick when you scroll down",
+    "description": "A Filament plugin that makes table headers sticky when scrolling for better UX",
     "keywords": [
         "WatheqAlshowaiter",
+        "Watheq Alshowaiter",
+        "filament",
+        "filament-plugin",
         "laravel",
-        "filament-sticky-table-header"
+        "sticky-header",
+        "table",
+        "ui",
+        "scroll",
+        "admin-panel"
     ],
     "homepage": "https://github.com/watheqalshowaiter/filament-sticky-table-header",
     "support": {

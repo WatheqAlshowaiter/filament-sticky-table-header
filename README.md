@@ -79,7 +79,7 @@ That's it! Your table headers will now stick to the top when scrolling.
 
 ✅ Supports Filament versions: 4.x and 3.x.
 
-✅ Fully automated tested with PHPUnit with 100% code coverage.
+✅ Fully tested with PHPUnit with 100% code coverage.
 
 ✅ Full GitHub Action CI pipeline to format code and test against Filament versions: 4.x and 3.x.
 
@@ -97,7 +97,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 If you have any ideas or suggestions to improve it or fix bugs, your contribution is welcome.
 
-I encourage you to look at [Issues](https://github.com/filament-sticky-table-header/issues) which are the
+I encourage you to look at [Issues](https://github.com/watheqalshowaiter/filament-sticky-table-header/issues) which are the
 most important features that need to be added.
 
 If you have something different, submit an issue first to discuss or report a bug, then do a pull request.
