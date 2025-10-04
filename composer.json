@@ -42,7 +42,7 @@
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
         "test": "vendor/bin/phpunit",
         "test:ci": "vendor/bin/phpunit --stop-on-failure --no-coverage",
-        "format": "vendor/bin/pint"
+        "lint": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true

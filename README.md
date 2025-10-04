@@ -1,12 +1,48 @@
-# Make FilamentPHP tables stick when you scroll down
+![Package cover](./arts/package-cover.png)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/watheqalshowaiter/filament-sticky-table-header.svg?style=flat-square)](https://packagist.org/packages/watheqalshowaiter/filament-sticky-table-header)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/watheqalshowaiter/filament-sticky-table-header/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/watheqalshowaiter/filament-sticky-table-header/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/watheqalshowaiter/filament-sticky-table-header/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/watheqalshowaiter/filament-sticky-table-header/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/watheqalshowaiter/filament-sticky-table-header.svg?style=flat-square)](https://packagist.org/packages/watheqalshowaiter/filament-sticky-table-header)
+# Filament Sticky Table Header
 
-A simple Filament plugin that makes table headers sticky when scrolling down. Keep your column headers visible at all
-times for better user experience with long tables.
+<!-- shields -->
+[![Filament 3][ico-filament3]][link-packagist]
+[![Filament 4][ico-filament4]][link-packagist]
+[![Required Laravel Version][ico-laravel]][link-packagist]
+[![Required PHP Version][ico-php]][link-packagist]
+[![Latest Version on Packagist][ico-version]][link-packagist]
+![GitHub Tests For Filament Versions Action Status][ico-tests-for-filament-versions]
+![GitHub Code Style Action Status][ico-code-style]
+[![Total Downloads][ico-downloads]][link-downloads]
+![GitHub Stars][ico-github-stars]
+[![StandWithPalestine][ico-palestine]][link-palestine]
+
+[ico-filament3]: https://img.shields.io/badge/FILAMENT-3.x-F2911B?style=flat-square
+
+[ico-filament4]: https://img.shields.io/badge/FILAMENT-4.x-F2911B?style=flat-square
+
+[ico-laravel]: https://img.shields.io/badge/Laravel-%E2%89%A510-ff2d20?style=flat-square&logo=laravel
+
+[ico-php]: https://img.shields.io/packagist/dependency-v/watheqalshowaiter/filament-sticky-table-header/php.svg?color=%238892BF&logo=php&style=flat-square
+
+[ico-version]: https://img.shields.io/packagist/v/watheqalshowaiter/filament-sticky-table-header.svg?style=flat-square
+
+[ico-downloads]: https://img.shields.io/packagist/dt/watheqalshowaiter/filament-sticky-table-header.svg?style=flat-square&color=%23007ec6
+
+[ico-code-style]: https://img.shields.io/github/actions/workflow/status/watheqalshowaiter/filament-sticky-table-header/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square
+
+[ico-tests-for-filament-versions]: https://img.shields.io/github/actions/workflow/status/watheqalshowaiter/filament-sticky-table-header/run-tests.yml?branch=main&label=filament%20version%20tests&style=flat-square
+
+[ico-github-stars]: https://img.shields.io/github/stars/watheqalshowaiter/filament-sticky-table-header?style=flat-square
+
+[ico-palestine]: https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/badges/StandWithPalestine.svg
+
+[link-packagist]: https://packagist.org/packages/watheqalshowaiter/filament-sticky-table-header
+
+[link-downloads]: https://packagist.org/packages/watheqalshowaiter/filament-sticky-table-header/stats
+
+[link-palestine]: https://github.com/TheBSD/StandWithPalestine/blob/main/docs/README.md
+
+<!-- ./shields -->
+
+Make Filament tables stick when you scroll down.
 
 ## Installation
 
@@ -27,12 +63,25 @@ public function panel(Panel $panel): Panel
 {
     return $panel
         ->plugins([
+            // Other plugins...
             StickyTableHeaderPlugin::make(),
         ]);
 }
 ```
 
 That's it! Your table headers will now stick to the top when scrolling.
+
+## Features
+
+✅ Supports Laravel versions: 12, 11, and 10.
+
+✅ Supports PHP versions: 8.4, 8.3, 8.2, and 8.1.
+
+✅ Supports Filament versions: 4.x and 3.x.
+
+✅ Fully automated tested with PHPUnit with 100% code coverage.
+
+✅ Full GitHub Action CI pipeline to format code and test against Filament versions: 4.x and 3.x.
 
 ## Testing
 
@@ -46,29 +95,23 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+If you have any ideas or suggestions to improve it or fix bugs, your contribution is welcome.
+
+I encourage you to look at [Issues](https://github.com/filament-sticky-table-header/issues) which are the
+most important features that need to be added.
+
+If you have something different, submit an issue first to discuss or report a bug, then do a pull request.
 
 ## Security Vulnerabilities
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+If you find any security vulnerabilities don't hesitate to contact me at `watheqalshowaiter[at]gmail[dot]com` to fix
+them.
 
 ## Credits
 
 - [Watheq Alshowaiter](https://github.com/WatheqAlshowaiter)
-- [All Contributors](../../contributors)
-
-## Features
-
-✅ it has 100% test coverage.
+- [All Contributors](https://github.com/WatheqAlshowaiter/filament-sticky-table-header/graphs/contributors)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-
-[//]: # (todos)
-
-
-[//]: # (add gif/video for the readme)
-
-[//]: # (add filament banner to readme and also for the og:image in github settings)
