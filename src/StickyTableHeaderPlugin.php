@@ -27,7 +27,7 @@ class StickyTableHeaderPlugin implements Plugin
     public function register(Panel $panel): void
     {
         FilamentAsset::register([
-            Css::make('sticky-table-header', __DIR__ . '/../resources/css/sticky-table-header.css'),
+            Css::make('filament/sticky-table-header', __DIR__ . '/../resources/css/sticky-table-header.css'),
         ]);
     }
 
