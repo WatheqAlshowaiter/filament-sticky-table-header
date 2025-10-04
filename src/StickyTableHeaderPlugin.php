@@ -14,11 +14,6 @@ class StickyTableHeaderPlugin implements Plugin
         return app(self::class);
     }
 
-    public static function get(): static
-    {
-        return static::make();
-    }
-
     public function getId(): string
     {
         return 'filament-sticky-table-header';
