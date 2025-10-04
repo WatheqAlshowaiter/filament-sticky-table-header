@@ -22,7 +22,7 @@ class StickyTableHeaderPlugin implements Plugin
     public function register(Panel $panel): void
     {
         $assets = [
-            Css::make('filament/sticky-table-header', __DIR__.'/../resources/css/sticky-table-header.css'),
+            Css::make('filament/sticky-table-header', __DIR__ . '/../resources/css/sticky-table-header.css'),
         ];
 
         $params = $this->getFilamentAssetParametersCount();
