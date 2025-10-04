@@ -3,7 +3,6 @@
 namespace WatheqAlshowaiter\FilamentStickyTableHeader\Tests;
 
 use Filament\Panel;
-use Filament\Support\Facades\FilamentAsset;
 use WatheqAlshowaiter\FilamentStickyTableHeader\StickyTableHeaderPlugin;
 
 class PluginTest extends TestCase
