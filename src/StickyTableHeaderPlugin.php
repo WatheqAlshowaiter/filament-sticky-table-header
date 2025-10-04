@@ -4,8 +4,8 @@ namespace WatheqAlshowaiter\FilamentStickyTableHeader;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Assets\Css;
+use Filament\Support\Facades\FilamentAsset;
 
 class StickyTableHeaderPlugin implements Plugin
 {
