@@ -64,6 +64,8 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 
 [//]: # (todos)
+[//]: # (fix dark mode شفافية)
+[//]: # (fix on mobile screen)
 [//]: # (add gif/video for the readme)
 [//]: # (add filament banner to readme and also for the og:image in github settings)
 [//]: # (remove pest and keep phpunit for simplicity maybe)

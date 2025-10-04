@@ -53,13 +53,6 @@
             "pestphp/pest-plugin": true
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "WatheqAlshowaiter\\FilamentStickyTableHeader\\FilamentStickyTableHeaderServiceProvider"
-            ]
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
