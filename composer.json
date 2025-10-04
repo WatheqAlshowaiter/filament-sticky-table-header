@@ -41,8 +41,7 @@
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
         "test": "vendor/bin/phpunit",
-        "test:ci": "vendor/bin/phpunit --stop-on-failure",
-        "test-coverage": "vendor/bin/phpunit --coverage",
+        "test:ci": "vendor/bin/phpunit --stop-on-failure --no-coverage",
         "format": "vendor/bin/pint"
     },
     "config": {
