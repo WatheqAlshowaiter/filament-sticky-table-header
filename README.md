@@ -42,7 +42,7 @@
 
 <!-- ./shields -->
 
-A Filament plugin that makes table headers stick when you scrolling down for better UX.
+A Filament plugin that makes table headers stick when scrolling down for better UX.
 
 ## Demo
 
