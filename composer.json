@@ -1,6 +1,6 @@
 {
     "name": "watheqalshowaiter/filament-sticky-table-header",
-    "description": "A Filament plugin that makes table headers sticky when scrolling for better UX",
+    "description": "A Filament plugin that makes table headers stick when you scrolling down for better UX.",
     "keywords": [
         "WatheqAlshowaiter",
         "Watheq Alshowaiter",
