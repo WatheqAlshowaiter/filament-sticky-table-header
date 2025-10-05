@@ -14,9 +14,9 @@
 ![GitHub Stars][ico-github-stars]
 [![StandWithPalestine][ico-palestine]][link-palestine]
 
-[ico-filament3]: https://img.shields.io/badge/FILAMENT-3.x-F2911B?style=flat-square
+[ico-filament3]: https://img.shields.io/badge/Filament-3.x-F2911B?style=flat-square
 
-[ico-filament4]: https://img.shields.io/badge/FILAMENT-4.x-F2911B?style=flat-square
+[ico-filament4]: https://img.shields.io/badge/Filament-4.x-F2911B?style=flat-square
 
 [ico-laravel]: https://img.shields.io/badge/Laravel-%E2%89%A510-ff2d20?style=flat-square&logo=laravel
 
