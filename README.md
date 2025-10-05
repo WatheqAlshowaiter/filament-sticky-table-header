@@ -1,4 +1,4 @@
-![Package cover](./arts/package-cover.png)
+<img src="./arts/package-cover.png" alt="Package cover" class="filament-hidden">
 
 # Filament Sticky Table Header
 
@@ -42,7 +42,7 @@
 
 <!-- ./shields -->
 
-Make Filament tables stick when you scroll down.
+A Filament plugin that makes table headers stick when you scrolling down for better UX.
 
 ## Demo
 
@@ -110,6 +110,12 @@ If you have something different, submit an issue first to discuss or report a bu
 
 If you find any security vulnerabilities don't hesitate to contact me at `watheqalshowaiter[at]gmail[dot]com` to fix
 them.
+
+## Related Packages
+
+- **[Filament Sticky Table Header](https://github.com/WatheqAlshowaiter/filament-sticky-table-header)** - Make Filament table headers stick when scrolling for better UX.
+- **[Model Fields](https://github.com/WatheqAlshowaiter/model-fields)** - Quickly retrieve required, nullable, and default fields for any Laravel model.
+- **[Backup Tables](https://github.com/WatheqAlshowaiter/backup-tables)** - Backup single or multiple database tables with ease.
 
 ## Credits
 
