@@ -72,6 +72,11 @@ public function panel(Panel $panel): Panel
         ]);
 }
 ```
+You may need to run this command to publish assets
+
+```sh
+php artisan filament:assets
+```
 
 That's it! Your table headers will now stick to the top when scrolling.
 
