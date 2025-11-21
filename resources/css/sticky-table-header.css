@@ -1,14 +1,21 @@
-.fi-ta-table thead {
-    position: sticky !important;
-    top: 0;
-}
+@media (min-width: 768px) {
+    .fi-ta-table thead {
+        position: sticky !important;
+        top: 0;
+    }
 
-.dark .fi-ta-table thead {
-    background-color: rgb(24, 24, 27);
-}
+    .dark .fi-ta-table thead {
+        background-color: rgb(24, 24, 27);
+    }
 
-.fi-ta-content {
-    max-height: calc(100vh - 20rem);
-    overflow-y: auto;
-    position: relative;
+    /*
+        .fi-ta-content for Filament 3.x
+        .fi-ta-content-ctn for Filament 4.x
+    */
+    .fi-ta-content,
+    .fi-ta-content-ctn {
+        max-height: calc(100vh - 20rem);
+        overflow-y: auto;
+        position: relative;
+    }
 }
