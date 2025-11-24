@@ -2,7 +2,7 @@
 .fi-ta-table thead {
     position: sticky !important;
     top: 0;
-    z-index: 10; /* Keep above `edit` and `delete` buttons but below filter dropdown */
+    z-index: 10; /* Keep above `edit`, `delete` and other inline action buttons but below filter dropdown */
 }
 
 .dark .fi-ta-table thead {
