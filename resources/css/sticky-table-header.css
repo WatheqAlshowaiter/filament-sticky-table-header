@@ -1,21 +1,21 @@
-@media (min-width: 768px) {
-    .fi-ta-table thead {
-        position: sticky !important;
-        top: 0;
-    }
+/* Table header */
+.fi-ta-table thead {
+    position: sticky !important;
+    top: 0;
+    z-index: 10; /* Keep above `edit` and `delete` buttons but below filter dropdown */
+}
 
-    .dark .fi-ta-table thead {
-        background-color: rgb(24, 24, 27);
-    }
+.dark .fi-ta-table thead {
+    background-color: rgb(24, 24, 27);
+}
 
-    /*
-        .fi-ta-content for Filament 3.x
-        .fi-ta-content-ctn for Filament 4.x
-    */
-    .fi-ta-content,
-    .fi-ta-content-ctn {
-        max-height: calc(100vh - 20rem);
-        overflow-y: auto;
-        position: relative;
-    }
+/* Table content container
+   - Filament 3.x: .fi-ta-content
+   - Filament 4.x: .fi-ta-content-ctn
+*/
+.fi-ta-content,
+.fi-ta-content-ctn {
+    max-height: calc(100vh - 20rem);
+    overflow-y: auto;
+    position: relative;
 }
