@@ -2,6 +2,13 @@
 
 All notable changes to `filament-sticky-table-header` will be documented in this file.
 
+## 1.2.0 - 2025-11-24
+
+- Fixes sticky header for mobile screens
+- Position the sticky header between `edit` and `delete` actions and filter dropdown
+
+**Full Changelog**: https://github.com/WatheqAlshowaiter/filament-sticky-table-header/compare/1.1.0...1.2.0
+
 ## 1.1.0 - 2025-11-21
 
 ### What's Changed
