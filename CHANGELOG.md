@@ -2,6 +2,12 @@
 
 All notable changes to `filament-sticky-table-header` will be documented in this file.
 
+## 1.2.1 - 2025-11-24
+
+- Make table header not conflicting with dropdown in v3
+
+**Full Changelog**: https://github.com/WatheqAlshowaiter/filament-sticky-table-header/compare/1.2.0...1.2.1
+
 ## 1.2.0 - 2025-11-24
 
 - Fixes sticky header for mobile screens
