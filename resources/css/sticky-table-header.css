@@ -1,27 +1,33 @@
-/* Table header */
+/* --------------------------------------------------
+   Sticky Table Header
+   z-index: 9 works in both v3 and v4
+   (z-index: 10 conflicts with dropdowns in v3)
+-------------------------------------------------- */
 .fi-ta-table thead {
     position: sticky !important;
     top: 0;
     z-index: 9;
-    /*
-        Keep header above inline action buttons (edit, delete, etc.)
-        but below filter dropdown menus.
-
-        - Filament 3.x: z-index 10 conflicts with filter dropdowns.
-        - Filament 4.x: z-index 10 works fine.
-
-        Choosing 9 ensures consistent behavior across both versions.
-    */
 }
 
+/* Remove border between header rows (v3) */
+.fi-ta-table thead tr + tr {
+    border-top-width: 0 !important;
+}
+
+/* Remove border between group header rows (v4) */
+.fi-ta-table thead tr.fi-ta-table-head-groups-row {
+    border-bottom-width: 0 !important;
+}
+
+/* Dark mode background */
 .dark .fi-ta-table thead {
     background-color: rgb(24, 24, 27);
 }
 
-/* Table content container
-   - Filament 3.x: .fi-ta-content
-   - Filament 4.x: .fi-ta-content-ctn
-*/
+/* --------------------------------------------------
+   Scrollable Table Container
+   Supports v3 (.fi-ta-content) and v4 (.fi-ta-content-ctn)
+-------------------------------------------------- */
 .fi-ta-content,
 .fi-ta-content-ctn {
     max-height: calc(100vh - 20rem);
