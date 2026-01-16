@@ -2,6 +2,12 @@
 
 All notable changes to `filament-sticky-table-header` will be documented in this file.
 
+## 1.4.0 - 2026-01-16
+
+Support filament v5
+
+**Full Changelog**: https://github.com/WatheqAlshowaiter/filament-sticky-table-header/compare/1.3.0...1.4.0
+
 ## 1.3.0 - 2025-12-11
 
 ### What's Changed
