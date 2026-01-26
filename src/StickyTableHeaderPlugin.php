@@ -27,7 +27,7 @@ class StickyTableHeaderPlugin implements Plugin
     {
         $assets = [
             Css::make('filament/sticky-table-header', __DIR__ . '/../resources/css/sticky-table-header.css'),
-            //Js::make('filament/sticky-table-header', __DIR__ . '/../resources/js/sticky-table-header.js'),
+            // Js::make('filament/sticky-table-header', __DIR__ . '/../resources/js/sticky-table-header.js'),
 
         ];
 
@@ -44,11 +44,11 @@ class StickyTableHeaderPlugin implements Plugin
     }
 
     public function boot(Panel $panel): void
-    {  
+    {
         FilamentView::registerRenderHook(
             PanelsRenderHook::SCRIPTS_AFTER,
-             fn (): HtmlString => new HtmlString(
-            '<script>
+            fn (): HtmlString => new HtmlString(
+                '<script>
                 document.addEventListener("livewire:init", () => {
                     window.addEventListener("filament-sticky-table::scroll-to-top", () => {
                         const tableContainer = document.querySelector(".fi-ta-content, .fi-ta-content-ctn");
