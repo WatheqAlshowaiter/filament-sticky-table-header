@@ -5,7 +5,11 @@ namespace WatheqAlshowaiter\FilamentStickyTableHeader;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Assets\Css;
+use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
+use Filament\Support\Facades\FilamentView;
+use Filament\View\PanelsRenderHook;
+use Illuminate\Support\HtmlString;
 
 class StickyTableHeaderPlugin implements Plugin
 {
@@ -23,6 +27,8 @@ class StickyTableHeaderPlugin implements Plugin
     {
         $assets = [
             Css::make('filament/sticky-table-header', __DIR__ . '/../resources/css/sticky-table-header.css'),
+            //Js::make('filament/sticky-table-header', __DIR__ . '/../resources/js/sticky-table-header.js'),
+
         ];
 
         $params = $this->getFilamentAssetParametersCount();
@@ -38,8 +44,18 @@ class StickyTableHeaderPlugin implements Plugin
     }
 
     public function boot(Panel $panel): void
-    {
-        //
+    {  
+        FilamentView::registerRenderHook(
+            PanelsRenderHook::SCRIPTS_AFTER,
+             fn (): HtmlString => new HtmlString(
+            '<script>
+                document.addEventListener(
+                    "filament-sticky-table::scroll-to-top",
+                    () => window.scrollTo(0, 0)
+                );
+            </script>'
+            ),
+        );
     }
 
     private function getFilamentAssetParametersCount(): int

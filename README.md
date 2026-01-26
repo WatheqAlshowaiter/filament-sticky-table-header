@@ -80,6 +80,27 @@ php artisan filament:assets
 
 That's it! Your table headers will now stick to the top when scrolling.
 
+
+### Note on scroll to top
+if you want to scroll to top on page change (next, previous, etc.), you can add this code inside your **ListResource** Page
+
+for example, 
+
+```php
+class ListUsers extends ListRecords
+{
+    // Add this 
+    public function setPage($page, $pageName = 'page'): void
+    {
+        parent::setPage($page, $pageName);
+
+        if($this->getTable()->shouldScrollToTopOnPageChange()){
+            $this->dispatch('filament-sticky-table::scroll-to-top');
+        }
+    }
+}
+```
+
 ## Features
 
 ✅ Supports Laravel versions: 12, 11, and 10.
