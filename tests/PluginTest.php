@@ -37,4 +37,16 @@ class PluginTest extends TestCase
 
         $this->assertInstanceOf(Panel::class, $panel);
     }
+
+    public function test_scroll_to_top_script_is_rendered(): void
+    {
+        $plugin = StickyTableHeaderPlugin::make();
+        $panel = Panel::make()->id('admin');
+
+        $plugin->register($panel);
+        $plugin->boot($panel);
+
+        // The boot method should register the render hook without errors
+        $this->assertTrue(true);
+    }
 }

@@ -49,10 +49,17 @@ class StickyTableHeaderPlugin implements Plugin
             PanelsRenderHook::SCRIPTS_AFTER,
              fn (): HtmlString => new HtmlString(
             '<script>
-                document.addEventListener(
-                    "filament-sticky-table::scroll-to-top",
-                    () => window.scrollTo(0, 0)
-                );
+                document.addEventListener("livewire:init", () => {
+                    window.addEventListener("filament-sticky-table::scroll-to-top", () => {
+                        const tableContainer = document.querySelector(".fi-ta-content, .fi-ta-content-ctn");
+                        
+                        if (tableContainer) {
+                            tableContainer.scrollTop = 0;
+                        } else { // Fallback
+                            window.scrollTo({ top: 0, behavior: "instant" });
+                        }
+                    });
+                });
             </script>'
             ),
         );
