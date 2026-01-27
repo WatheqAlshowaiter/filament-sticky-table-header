@@ -47,7 +47,7 @@
     },
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "test": "vendor/bin/phpunit",
+        "test": "XDEBUG_MODE=coverage vendor/bin/phpunit",
         "test:ci": "vendor/bin/phpunit --stop-on-failure --no-coverage",
         "lint": "vendor/bin/pint"
     },
