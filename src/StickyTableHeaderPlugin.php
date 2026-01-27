@@ -15,9 +15,9 @@ class StickyTableHeaderPlugin implements Plugin
         return app(self::class);
     }
 
-    public function shouldScrollToTopOnPageChanged($bool = true, $behavior = 'auto'): static
+    public function shouldScrollToTopOnPageChanged($enabled = true, $behavior = 'auto'): static
     {
-        if (! $bool) {
+        if (! $enabled) {
             return $this;
         }
 
