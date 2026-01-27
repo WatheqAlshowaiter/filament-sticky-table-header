@@ -6,12 +6,47 @@ use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
+use Filament\Support\Facades\FilamentView;
 
 class StickyTableHeaderPlugin implements Plugin
 {
     public static function make(): static
     {
         return app(self::class);
+    }
+
+    public function shouldScrollToTopOnPageChanged($bool = true, $behavior = 'auto'): static
+    {
+        if (! $bool) {
+            return $this;
+        }
+
+        if (!in_array($behavior, ['smooth', 'instant', 'auto'])) {
+            throw new \InvalidArgumentException("Scroll behavior must be 'smooth', 'instant', or 'auto'");
+        }
+
+        // here
+
+        FilamentView::registerRenderHook(
+            'panels::body.end',
+            fn(): string => <<<HTML
+                <script>
+                    document.addEventListener('livewire:init', () => {
+                        Livewire.hook('request', ({ component, respond }) => {
+                            const table = document.querySelector('.fi-ta-table');
+
+                            if (!table) {
+                                return;
+                            }
+
+                            table.scrollIntoView({ behavior: '{$behavior}', block: 'start' });
+                        });
+                    });
+                </script>
+            HTML
+        );
+
+        return $this;
     }
 
     public function getId(): string
