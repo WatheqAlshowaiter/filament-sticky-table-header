@@ -2,6 +2,20 @@
 
 All notable changes to `filament-sticky-table-header` will be documented in this file.
 
+## 1.5.0 - 2026-01-27
+
+### What's Changed
+
+* chore(deps): bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/WatheqAlshowaiter/filament-sticky-table-header/pull/20
+* feat: support filament v5 by @WatheqAlshowaiter in https://github.com/WatheqAlshowaiter/filament-sticky-table-header/pull/21
+* Fix scroll to top in tables by @Eslam-Nazer in https://github.com/WatheqAlshowaiter/filament-sticky-table-header/pull/23
+
+### New Contributors
+
+* @Eslam-Nazer made their first contribution in https://github.com/WatheqAlshowaiter/filament-sticky-table-header/pull/23
+
+**Full Changelog**: https://github.com/WatheqAlshowaiter/filament-sticky-table-header/compare/1.4.0...1.5.0
+
 ## 1.4.0 - 2026-01-16
 
 Support filament v5
