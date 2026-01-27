@@ -3,6 +3,7 @@
 namespace WatheqAlshowaiter\FilamentStickyTableHeader\Tests;
 
 use Filament\Panel;
+use Filament\Support\Facades\FilamentView;
 use WatheqAlshowaiter\FilamentStickyTableHeader\StickyTableHeaderPlugin;
 
 class PluginTest extends TestCase
@@ -89,5 +90,18 @@ class PluginTest extends TestCase
         $this->expectExceptionMessage("Scroll behavior must be 'smooth', 'instant', or 'auto'");
 
         $plugin->shouldScrollToTopOnPageChanged(true, 'invalid');
+    }
+
+    public function test_scroll_to_top_registers_render_hook_script(): void
+    {
+        $plugin = StickyTableHeaderPlugin::make();
+
+        $plugin->shouldScrollToTopOnPageChanged(true, 'smooth');
+
+        $output = FilamentView::renderHook('panels::body.end');
+
+        $this->assertStringContainsString('livewire:init', $output->toHtml());
+        $this->assertStringContainsString('scrollIntoView', $output->toHtml());
+        $this->assertStringContainsString("behavior: 'smooth'", $output->toHtml());
     }
 }
