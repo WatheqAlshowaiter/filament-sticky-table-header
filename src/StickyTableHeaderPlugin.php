@@ -25,8 +25,6 @@ class StickyTableHeaderPlugin implements Plugin
             throw new \InvalidArgumentException("Scroll behavior must be 'smooth', 'instant', or 'auto'");
         }
 
-        // here
-
         FilamentView::registerRenderHook(
             'panels::body.end',
             fn(): string => <<<HTML
