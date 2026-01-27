@@ -21,13 +21,13 @@ class StickyTableHeaderPlugin implements Plugin
             return $this;
         }
 
-        if (!in_array($behavior, ['smooth', 'instant', 'auto'])) {
+        if (! in_array($behavior, ['smooth', 'instant', 'auto'])) {
             throw new \InvalidArgumentException("Scroll behavior must be 'smooth', 'instant', or 'auto'");
         }
 
         FilamentView::registerRenderHook(
             'panels::body.end',
-            fn(): string => <<<HTML
+            fn (): string => <<<HTML
                 <script>
                     document.addEventListener('livewire:init', () => {
                         Livewire.hook('request', ({ component, respond }) => {
