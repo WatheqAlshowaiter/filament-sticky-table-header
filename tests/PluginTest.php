@@ -44,7 +44,7 @@ class PluginTest extends TestCase
         $panel = Panel::make()->id('admin');
 
         $plugin->register($panel);
-        
+
         $result = $plugin->shouldScrollToTopOnPageChanged();
         $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
     }
@@ -52,7 +52,7 @@ class PluginTest extends TestCase
     public function test_should_scroll_to_top_on_page_changed_disabled(): void
     {
         $plugin = StickyTableHeaderPlugin::make();
-        
+
         $result = $plugin->shouldScrollToTopOnPageChanged(false);
         $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
     }
@@ -60,7 +60,7 @@ class PluginTest extends TestCase
     public function test_should_scroll_to_top_on_page_changed_with_smooth_behavior(): void
     {
         $plugin = StickyTableHeaderPlugin::make();
-        
+
         $result = $plugin->shouldScrollToTopOnPageChanged(true, 'smooth');
         $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
     }
@@ -68,7 +68,7 @@ class PluginTest extends TestCase
     public function test_should_scroll_to_top_on_page_changed_with_instant_behavior(): void
     {
         $plugin = StickyTableHeaderPlugin::make();
-        
+
         $result = $plugin->shouldScrollToTopOnPageChanged(true, 'instant');
         $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
     }
@@ -76,7 +76,7 @@ class PluginTest extends TestCase
     public function test_should_scroll_to_top_on_page_changed_with_auto_behavior(): void
     {
         $plugin = StickyTableHeaderPlugin::make();
-        
+
         $result = $plugin->shouldScrollToTopOnPageChanged(true, 'auto');
         $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
     }
@@ -84,10 +84,10 @@ class PluginTest extends TestCase
     public function test_should_scroll_to_top_on_page_changed_invalid_behavior_throws_exception(): void
     {
         $plugin = StickyTableHeaderPlugin::make();
-        
+
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage("Scroll behavior must be 'smooth', 'instant', or 'auto'");
-        
+
         $plugin->shouldScrollToTopOnPageChanged(true, 'invalid');
     }
 }
