@@ -93,11 +93,11 @@ You can configure **shouldScrollToTopOnPageChange()** like:
 
 ✅ Supports PHP versions: 8.4, 8.3, 8.2, and 8.1.
 
-✅ Supports Filament versions: 4.x and 3.x.
+✅ Supports Filament versions: 5.x, 4.x and 3.x.
 
 ✅ Fully tested with PHPUnit with 100% code coverage.
 
-✅ Full GitHub Action CI pipeline to format code and test against Filament versions: 4.x and 3.x.
+✅ Full GitHub Action CI pipeline to format code and test against Filament versions: 5.x, 4.x and 3.x.
 
 ## Testing
 
