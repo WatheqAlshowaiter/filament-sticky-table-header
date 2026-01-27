@@ -3,7 +3,6 @@
 # Filament Sticky Table Header
 
 <!-- shields -->
-
 [![Filament 3][ico-filament3]][link-packagist]
 [![Filament 4][ico-filament4]][link-packagist]
 [![Required Laravel Version][ico-laravel]][link-packagist]
@@ -62,7 +61,7 @@ public function panel(Panel $panel): Panel
 }
 ```
 
-You may need to run this command to publish assets
+You may need to run this command to publish assets:
 
 ```sh
 php artisan filament:assets
@@ -72,7 +71,8 @@ That's it! Your table headers will now stick to the top when scrolling.
 
 ### Note on scroll to top
 
-If you want to scroll to top on page change (next, previous, etc.), you can add this code inside your **PanelProvider** page for example `AdminPanelProvider`.
+If you want to scroll to top on page change (next, previous, etc.), you can add this code inside your **PanelProvider**
+page for example `AdminPanelProvider`.
 
 ```php
 ->plugins([
@@ -113,7 +113,8 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 If you have any ideas or suggestions to improve it or fix bugs, your contribution is welcome.
 
-I encourage you to look at [Issues](https://github.com/watheqalshowaiter/filament-sticky-table-header/issues) which are the
+I encourage you to look at [Issues](https://github.com/watheqalshowaiter/filament-sticky-table-header/issues) which are
+the
 most important features that need to be added.
 
 If you have something different, submit an issue first to discuss or report a bug, then do a pull request.
@@ -125,8 +126,10 @@ them.
 
 ## Related Packages
 
-- **[Model Fields](https://github.com/WatheqAlshowaiter/model-fields)** - Quickly retrieve required, nullable, and default fields for any Laravel model.
-- **[Backup Tables](https://github.com/WatheqAlshowaiter/backup-tables)** - Backup single or multiple database tables with ease.
+- **[Model Fields](https://github.com/WatheqAlshowaiter/model-fields)** - Quickly retrieve required, nullable, and
+  default fields for any Laravel model.
+- **[Backup Tables](https://github.com/WatheqAlshowaiter/backup-tables)** - Backup single or multiple database tables
+  with ease.
 
 ## Credits
 
