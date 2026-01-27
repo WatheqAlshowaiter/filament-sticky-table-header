@@ -59,3 +59,30 @@ jobs:
 
       - name: Run tests
         run: composer test:ci
+  
+  filament5:
+    name: Filament 5 (Laravel 11.28+, PHP 8.2+)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+          extensions: dom, curl, mbstring, zip, pdo_sqlite, bcmath, intl, fileinfo
+          coverage: none
+
+      - name: Install dependencies
+        run: |
+          composer require laravel/framework:"^11.28" \
+                           orchestra/testbench:"^9.0" \
+                           filament/filament:"^5.0" \
+                           --dev --no-update
+          composer update --prefer-dist --no-interaction
+
+      - run: composer show -D
+
+      - name: Run tests
+        run: composer test:ci

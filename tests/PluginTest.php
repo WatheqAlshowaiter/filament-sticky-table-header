@@ -3,6 +3,7 @@
 namespace WatheqAlshowaiter\FilamentStickyTableHeader\Tests;
 
 use Filament\Panel;
+use Filament\Support\Facades\FilamentView;
 use WatheqAlshowaiter\FilamentStickyTableHeader\StickyTableHeaderPlugin;
 
 class PluginTest extends TestCase
@@ -36,5 +37,71 @@ class PluginTest extends TestCase
         $plugin->boot($panel);
 
         $this->assertInstanceOf(Panel::class, $panel);
+    }
+
+    public function test_should_scroll_to_top_on_page_changed_enabled(): void
+    {
+        $plugin = StickyTableHeaderPlugin::make();
+        $panel = Panel::make()->id('admin');
+
+        $plugin->register($panel);
+
+        $result = $plugin->shouldScrollToTopOnPageChanged();
+        $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
+    }
+
+    public function test_should_scroll_to_top_on_page_changed_disabled(): void
+    {
+        $plugin = StickyTableHeaderPlugin::make();
+
+        $result = $plugin->shouldScrollToTopOnPageChanged(false);
+        $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
+    }
+
+    public function test_should_scroll_to_top_on_page_changed_with_smooth_behavior(): void
+    {
+        $plugin = StickyTableHeaderPlugin::make();
+
+        $result = $plugin->shouldScrollToTopOnPageChanged(true, 'smooth');
+        $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
+    }
+
+    public function test_should_scroll_to_top_on_page_changed_with_instant_behavior(): void
+    {
+        $plugin = StickyTableHeaderPlugin::make();
+
+        $result = $plugin->shouldScrollToTopOnPageChanged(true, 'instant');
+        $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
+    }
+
+    public function test_should_scroll_to_top_on_page_changed_with_auto_behavior(): void
+    {
+        $plugin = StickyTableHeaderPlugin::make();
+
+        $result = $plugin->shouldScrollToTopOnPageChanged(true, 'auto');
+        $this->assertInstanceOf(StickyTableHeaderPlugin::class, $result);
+    }
+
+    public function test_should_scroll_to_top_on_page_changed_invalid_behavior_throws_exception(): void
+    {
+        $plugin = StickyTableHeaderPlugin::make();
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Scroll behavior must be 'smooth', 'instant', or 'auto'");
+
+        $plugin->shouldScrollToTopOnPageChanged(true, 'invalid');
+    }
+
+    public function test_scroll_to_top_registers_render_hook_script(): void
+    {
+        $plugin = StickyTableHeaderPlugin::make();
+
+        $plugin->shouldScrollToTopOnPageChanged(true, 'smooth');
+
+        $output = FilamentView::renderHook('panels::body.end');
+
+        $this->assertStringContainsString('livewire:init', $output->toHtml());
+        $this->assertStringContainsString('scrollIntoView', $output->toHtml());
+        $this->assertStringContainsString("behavior: 'smooth'", $output->toHtml());
     }
 }
