@@ -14,6 +14,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 ![GitHub Stars][ico-github-stars]
 [![StandWithPalestine][ico-palestine]][link-palestine]
+[![ko-fi][ico-ko-fi]][link-ko-fi]
 
 [ico-filament3]: https://img.shields.io/badge/Filament-3.x-F2911B?style=flat-square
 [ico-filament4]: https://img.shields.io/badge/Filament-4.x-F2911B?style=flat-square
@@ -25,10 +26,12 @@
 [ico-tests-for-filament-versions]: https://img.shields.io/github/actions/workflow/status/watheqalshowaiter/filament-sticky-table-header/run-tests.yml?branch=main&label=filament%20version%20tests&style=flat-square
 [ico-github-stars]: https://img.shields.io/github/stars/watheqalshowaiter/filament-sticky-table-header?style=flat-square
 [ico-palestine]: https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/badges/StandWithPalestine.svg
+[ico-ko-fi]: https://img.shields.io/badge/Ko--fi-Support-ff5f5f?logo=ko-fi&style=flat-square
+
 [link-packagist]: https://packagist.org/packages/watheqalshowaiter/filament-sticky-table-header
 [link-downloads]: https://packagist.org/packages/watheqalshowaiter/filament-sticky-table-header/stats
 [link-palestine]: https://github.com/TheBSD/StandWithPalestine/blob/main/docs/README.md
-
+[link-ko-fi]: https://ko-fi.com/watheq_show
 <!-- ./shields -->
 
 A Filament plugin that makes table headers stick when scrolling down for better UX.
@@ -127,6 +130,10 @@ them.
 
 - **[Model Fields](https://github.com/WatheqAlshowaiter/model-fields)** - Quickly retrieve required, nullable, and default fields for any Laravel model.
 - **[Backup Tables](https://github.com/WatheqAlshowaiter/backup-tables)** - Backup single or multiple database tables with ease.
+
+## Support this project
+
+If this project helps you, consider supporting it on [Ko-fi ☕](https://ko-fi.com/watheq_show).
 
 ## Credits
 
