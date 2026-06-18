@@ -6,6 +6,8 @@ This checklist should be completed after each commit or fix to ensure all functi
 
 - [x] Sticky headers work in Filament v3
 - [x] Sticky headers work in Filament v4
+- [ ] Sticky headers work in Filament v5 on Laravel 12
+- [ ] Sticky headers work in Filament v5 on Laravel 13
 
 ## Theme Support
 
@@ -22,3 +24,4 @@ This checklist should be completed after each commit or fix to ensure all functi
 - [x] Table headers remain above `Edit` and `Delete` buttons when scrolling
 - [x] Table headers are behind the filter dropdown (correct z-index)
 - [x] no gap when use `ColumnGroup` that contains `->columns([ ... ])`
+- [ ] Pagination scroll-to-top works on Laravel 13

@@ -8,9 +8,44 @@ on:
   workflow_dispatch:
 
 jobs:
-  filament3:
-    name: Filament 3 (Laravel 10, PHP 8.1+)
+  tests:
+    name: ${{ matrix.name }}
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Filament 3 - Laravel 10 - PHP 8.1
+            php: "8.1"
+            laravel: "10.*"
+            testbench: "^8.0"
+            filament: "^3.0"
+          - name: Filament 4 - Laravel 11 - PHP 8.2
+            php: "8.2"
+            laravel: "^11.28"
+            testbench: "^9.0"
+            filament: "^4.0"
+          - name: Filament 5 - Laravel 11 - PHP 8.2
+            php: "8.2"
+            laravel: "^11.28"
+            testbench: "^9.0"
+            filament: "^5.0"
+          - name: Filament 5 - Laravel 12 - PHP 8.2
+            php: "8.2"
+            laravel: "^12.0"
+            testbench: "^10.0"
+            filament: "^5.0"
+          - name: Filament 5 - Laravel 13 - PHP 8.3
+            php: "8.3"
+            laravel: "^13.0"
+            testbench: "^11.0"
+            filament: "^5.0"
+          - name: Filament 5 - Laravel 13 - PHP 8.5
+            php: "8.5"
+            laravel: "^13.0"
+            testbench: "^11.0"
+            filament: "^5.0"
 
     steps:
       - uses: actions/checkout@v5
@@ -18,71 +53,27 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.1
+          php-version: ${{ matrix.php }}
           extensions: dom, curl, mbstring, zip, pdo_sqlite, bcmath, intl, fileinfo
           coverage: none
+
+      - name: Validate Composer configuration
+        run: composer validate --strict --no-check-publish
+
       - name: Install dependencies
         run: |
-          composer require laravel/framework:"10.*" \
-                           orchestra/testbench:"^8.0" \
-                           filament/filament:"^3.0" \
-                           --dev --no-update
+          composer require --dev --no-update \
+              laravel/framework:"${{ matrix.laravel }}" \
+              orchestra/testbench:"${{ matrix.testbench }}"
+          composer require --no-update \
+              filament/filament:"${{ matrix.filament }}"
           composer update --prefer-dist --no-interaction
-      - run: composer show -D
+
+      - name: Show installed versions
+        run: composer show --direct
 
       - name: Run tests
         run: composer test:ci
 
-  filament4:
-    name: Filament 4 (Laravel 11.28+, PHP 8.2+)
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v5
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.2
-          extensions: dom, curl, mbstring, zip, pdo_sqlite, bcmath, intl, fileinfo
-          coverage: none
-
-      - name: Install dependencies
-        run: |
-          composer require laravel/framework:"^11.28" \
-                           orchestra/testbench:"^9.0" \
-                           filament/filament:"^4.0" \
-                           --dev --no-update
-          composer update --prefer-dist --no-interaction
-
-      - run: composer show -D
-
-      - name: Run tests
-        run: composer test:ci
-  
-  filament5:
-    name: Filament 5 (Laravel 11.28+, PHP 8.2+)
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v5
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.2
-          extensions: dom, curl, mbstring, zip, pdo_sqlite, bcmath, intl, fileinfo
-          coverage: none
-
-      - name: Install dependencies
-        run: |
-          composer require laravel/framework:"^11.28" \
-                           orchestra/testbench:"^9.0" \
-                           filament/filament:"^5.0" \
-                           --dev --no-update
-          composer update --prefer-dist --no-interaction
-
-      - run: composer show -D
-
-      - name: Run tests
-        run: composer test:ci
+      - name: Check code style
+        run: vendor/bin/pint --test
