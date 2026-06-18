@@ -6,6 +6,7 @@
 
 [![Filament 3][ico-filament3]][link-packagist]
 [![Filament 4][ico-filament4]][link-packagist]
+[![Filament 5][ico-filament5]][link-packagist]
 [![Required Laravel Version][ico-laravel]][link-packagist]
 [![Required PHP Version][ico-php]][link-packagist]
 [![Latest Version on Packagist][ico-version]][link-packagist]
@@ -18,6 +19,7 @@
 
 [ico-filament3]: https://img.shields.io/badge/Filament-3.x-F2911B?style=flat-square
 [ico-filament4]: https://img.shields.io/badge/Filament-4.x-F2911B?style=flat-square
+[ico-filament5]: https://img.shields.io/badge/Filament-5.x-F2911B?style=flat-square
 [ico-laravel]: https://img.shields.io/badge/Laravel-%E2%89%A510-ff2d20?style=flat-square&logo=laravel
 [ico-php]: https://img.shields.io/packagist/dependency-v/watheqalshowaiter/filament-sticky-table-header/php.svg?color=%238892BF&logo=php&style=flat-square
 [ico-version]: https://img.shields.io/packagist/v/watheqalshowaiter/filament-sticky-table-header.svg?style=flat-square
@@ -92,15 +94,17 @@ You can configure **shouldScrollToTopOnPageChange()** like:
 
 ## Features
 
-✅ Supports Laravel versions: 12, 11, and 10.
+✅ Supports Laravel versions: 13, 12, 11, and 10.
 
-✅ Supports PHP versions: 8.4, 8.3, 8.2, and 8.1.
+✅ Supports PHP versions: 8.5, 8.4, 8.3, 8.2, and 8.1.
 
 ✅ Supports Filament versions: 5.x, 4.x and 3.x.
 
 ✅ Fully tested with PHPUnit with 100% code coverage.
 
-✅ Full GitHub Action CI pipeline to format code and test against Filament versions: 5.x, 4.x and 3.x.
+✅ CI verifies Laravel 10, 11, 12, and 13 across Filament 3.x, 4.x, and 5.x.
+
+Laravel 13 requires PHP 8.3+ and a Laravel 13-compatible Filament 5 release.
 
 ## Testing
 

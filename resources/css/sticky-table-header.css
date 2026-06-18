@@ -1,6 +1,6 @@
 /* --------------------------------------------------
    Sticky Table Header
-   z-index: 9 works in both v3 and v4
+   z-index: 9 works in Filament v3, v4, and v5
    (z-index: 10 conflicts with dropdowns in v3)
 -------------------------------------------------- */
 .fi-ta-table thead {
@@ -14,7 +14,7 @@
     border-top-width: 0 !important;
 }
 
-/* Remove border between group header rows (v4) */
+/* Remove border between group header rows (v4 and v5) */
 .fi-ta-table thead tr.fi-ta-table-head-groups-row {
     border-bottom-width: 0 !important;
 }
@@ -26,7 +26,7 @@
 
 /* --------------------------------------------------
    Scrollable Table Container
-   Supports v3 (.fi-ta-content) and v4 (.fi-ta-content-ctn)
+   Supports v3 (.fi-ta-content) and v4/v5 (.fi-ta-content-ctn)
 -------------------------------------------------- */
 .fi-ta-content,
 .fi-ta-content-ctn {
