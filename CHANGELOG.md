@@ -2,6 +2,14 @@
 
 All notable changes to `filament-sticky-table-header` will be documented in this file.
 
+## 1.5.2 - 2026-06-18
+
+### What's Changed
+
+* Support Laravel 13
+
+**Full Changelog**: https://github.com/WatheqAlshowaiter/filament-sticky-table-header/compare/1.5.1...1.5.2
+
 ## 1.5.1 - 2026-01-27
 
 small enhancements: more tests and improved CI testing
