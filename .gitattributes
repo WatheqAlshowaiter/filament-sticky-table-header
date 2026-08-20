@@ -15,6 +15,9 @@
 /docs                   export-ignore
 /images                 export-ignore
 /tests                  export-ignore
+/AGENTS.md              export-ignore
+/CHECKLIST.md           export-ignore
+/CLAUDE.md              export-ignore
 /package.json           export-ignore
 /phpstan-baseline.neon  export-ignore
 /phpstan.neon.dist      export-ignore
