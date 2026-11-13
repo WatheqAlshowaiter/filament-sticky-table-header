@@ -28,6 +28,18 @@ class PluginTest extends TestCase
         $this->assertFileExists($cssPath);
     }
 
+    public function test_card_grid_scrolls_in_one_container_only(): void
+    {
+        $css = file_get_contents(__DIR__ . '/../resources/css/sticky-table-header.css');
+
+        // contentGrid() nests .fi-ta-content inside .fi-ta-content-ctn: the
+        // inner one must not get its own max-height and scrollbar.
+        $this->assertMatchesRegularExpression(
+            '/\\.fi-ta-content-ctn \\.fi-ta-content\\s*\\{[^}]*max-height:\\s*none;[^}]*overflow-y:\\s*visible;/',
+            $css,
+        );
+    }
+
     public function test_can_register_with_panel(): void
     {
         $plugin = StickyTableHeaderPlugin::make();

@@ -34,3 +34,11 @@
     overflow-y: auto;
     position: relative;
 }
+
+/* Card grids (v4/v5 contentGrid()) nest .fi-ta-content inside
+   .fi-ta-content-ctn. Only the outer container scrolls — otherwise the
+   grid gets a second scrollbar inside the first. */
+.fi-ta-content-ctn .fi-ta-content {
+    max-height: none;
+    overflow-y: visible;
+}
